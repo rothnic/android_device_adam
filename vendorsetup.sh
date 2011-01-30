@@ -1,1 +1,1 @@
-add_lunch_combo generic_adam-eng
+add_lunch_combo full_adam-eng
