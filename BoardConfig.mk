@@ -45,7 +45,7 @@ BOARD_PREBUILT_LIBAUDIO := true
 # Use dirty hack to allow froyo libaudio
 BOARD_USE_KINETO_COMPATIBILITY := true
 
-BOARD_EGL_CFG := device/nvidia/harmony/egl.cfg
+BOARD_EGL_CFG := device/notionink/adam/egl.cfg
 
 # fix this up by examining /proc/mtd on a running device
 # dev:    size   erasesize  name
