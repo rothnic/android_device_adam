@@ -14,8 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-VENDOR=nvidia
-DEVICE=harmony
+VENDOR=notionink
+DEVICE=adam
 
 rm -r ../../../vendor/$VENDOR/$DEVICE
 mkdir -p ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -89,8 +89,6 @@ adb pull /system/lib/nvodm_focuser_conformance.so ../../../vendor/$VENDOR/$DEVIC
 adb pull /system/framework/com.nvidia.display.jar ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/framework/com.nvidia.graphics.jar ../../../vendor/$VENDOR/$DEVICE/proprietary
 
-# Pull TnT framework files
-adb pull /system/framework/com.tapntap.platform.jar ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # Pull nvidia EGL libs
 adb pull /system/lib/egl/libEGL_tegra.so ../../../vendor/$VENDOR/$DEVICE/proprietary

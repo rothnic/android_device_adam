@@ -66,6 +66,8 @@ BOARD_HAS_NO_MISC_PARTITION := true
 # Indicate that the board has an Internal SD Card
 BOARD_HAS_SDCARD_INTERNAL := true
 
+# use pre-kernel.35 vold usb mounting
+BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 TARGET_PREBUILT_KERNEL := device/notionink/adam/kernel
 
 # Below is a sample of how you can tweak the mount points using the board config.

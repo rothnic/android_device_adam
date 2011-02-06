@@ -23,9 +23,9 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-$(call inherit-product-if-exists, vendor/nvidia/harmony/harmony-vendor.mk)
+$(call inherit-product-if-exists, vendor/notionink/adam/adam-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/nvidia/harmony/overlay
+DEVICE_PACKAGE_OVERLAYS += device/notionink/adam/overlay
 
 # Include packages
 PRODUCT_PACKAGES += \
@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES += \
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/nvidia/harmony/kernel
+	LOCAL_KERNEL := device/notionink/adam/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -67,5 +67,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_harmony
-PRODUCT_DEVICE := harmony
+PRODUCT_NAME := full_adam
+PRODUCT_DEVICE := adam
