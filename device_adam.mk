@@ -2,13 +2,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get a proper init file
 PRODUCT_COPY_FILES += \
-    device/nvidia/harmony/init.harmony.rc:root/init.harmony.rc
+    device/notionink/adam/init.adam.rc:root/init.adam.rc
 
 # Place wifi files
 PRODUCT_COPY_FILES += \
-    device/nvidia/harmony/wifi/bcm4329.ko:system/lib/hw/wlan/bcm4329.ko \
-    device/nvidia/harmony/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
-    device/nvidia/harmony/wifi/dhcpcd.conf:/system/etc/dhcpcd/dhcpcd.conf
+    device/notionink/adam/wifi/bcm4329.ko:system/lib/hw/wlan/bcm4329.ko \
+    device/notionink/adam/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
+    device/notionink/adam/wifi/dhcpcd.conf:/system/etc/dhcpcd/dhcpcd.conf
 
 # Place permission files
 PRODUCT_COPY_FILES += \
@@ -35,14 +35,14 @@ PRODUCT_PACKAGES += \
     overlay.tegra \
     lights.tegra \
     sensors.tegra \
-    audiofix.harmony
+    audiofix.adam
 
 # Use MDPI artwork
 PRODUCT_LOCALES += mdpi
 
 # VOLD
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/etc/vold.harmony.fstab:system/etc/vold.fstab
+        $(LOCAL_PATH)/etc/vold.adam.fstab:system/etc/vold.fstab
 
 # Media Profile
 PRODUCT_COPY_FILES += \
