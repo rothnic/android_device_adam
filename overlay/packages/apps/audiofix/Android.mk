@@ -14,10 +14,11 @@
 # limitations under the License.
 #
 
-# This file is executed by build/envsetup.sh, and can use anything
-# defined in envsetup.sh.
-#
-# In particular, you can add lunch options with the add_lunch_combo
-# function: add_lunch_combo generic-eng
+LOCAL_PATH := $(call my-dir)
 
-add_lunch_combo full_adam-eng
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := $(call all-subdir-java-files)
+LOCAL_PACKAGE_NAME := audiofix.adam
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := platform
+include $(BUILD_PACKAGE)
