@@ -1,5 +1,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+# The gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
+
 # Get a proper init file
 PRODUCT_COPY_FILES += \
     device/notionink/adam/init.adam.rc:root/init.adam.rc
