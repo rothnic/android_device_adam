@@ -35,7 +35,7 @@ WIFI_DRIVER_MODULE_NAME     := "dhd"
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_CSR := true
 
-BOARD_KERNEL_CMDLINE :=  mem=448M@0M nvmem=64M@448M mem=512M@512M vmalloc=192M video=tegrafb console=ttyS0,115200n8 usbcore.old_scheme_first=1 cpuid=200102 devicetype=1002 btmac=737b8c131a00 tegraboot=nand mtdparts=tegra_nand:16384K@7424K(misc),16384K@24320K(recovery),16384K@41216K(boot),204800K@58112K(system),260224K@263552K(cache)
+BOARD_KERNEL_CMDLINE :=  mem=256M@0M nvmem=256M@256M mem=512M@512M vmalloc=384M video=tegrafb console=ttyS0,115200n8 usbcore.old_scheme_first=1 cpuid=200102 devicetype=1002 btmac=854e8f131a00 tegraboot=nand mtdparts=tegra_nand:16384K@9984K(misc),16384K@26880K(recovery),16384K@43776K(boot),204800K@60672K(system),781952K@266112K(cache) androidboot.hardware=adam
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_PAGE_SIZE := 0x00000800
 
@@ -57,7 +57,7 @@ BOARD_EGL_CFG := device/notionink/adam/egl.cfg
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01000000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01000000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x0c800000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x74938000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Setting this to avoid boot locks on the system from using the "misc" partition.
@@ -81,4 +81,3 @@ BOARD_CACHE_FILESYSTEM := yaffs2
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk3p1 	
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk2p1
 BOARD_SDCARD_DEVICE_INTERNAL := /dev/block/mmcblk3p1
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk2p1
